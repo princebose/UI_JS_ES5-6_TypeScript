@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height: 200px;
+            border: 1px solid salmon;
+            background-color: thistle;
+        }
+        p{
+            text-align: left;
+            font-size: large;
+            font-family: fantasy;
+            font-variant: small-caps;
+        }
+        
+
+    </style>
+    <!-- <script>
+            function toCelcius(f){
+                return((5/9)*(f-32)).toFixed(2);
+            }
+            document.write(toCelcius(55));
+            (function add(x,y){
+                document.write("\n",x+y)
+            })(10,20)
+            //alert("IIFE")
+        </script> -->
+</head>
+
+<body>
+    <!-- <script>
+        
+    /*    var count = 0;
+        while (count < 10) {
+            count++;
+            if ((count % 2) != 0)  continue 
+            else  document.write(count, "<br>"); 
+
+        }
+    */
+    </script> -->
+    <!-- <button onclick="fn()">CLICK</button>
+    <script>
+        function fn(){
+            var txt;
+            var person = prompt("Enter your name","John")
+            txt = "Welcome "+person
+            alert(txt)
+        }
+    </script> -->
+    <!-- <button onclick="add()">CLICK</button>
+    <script>
+        function add() {
+            var x = eval(prompt("Enter a number"))
+            //var x = parseInt(prompt("Enter a number"))
+            //var x = Number(prompt("Enter a number"))
+            var y = Number(prompt("Enter a number"))
+            document.write(x + y)
+        } 
+
+
+
+    </script>-->
+
+    <div onmousemove="myFunction(event)" onmouseout="clearOut()"></div>
+    <p id="p"></p>
+    <script>
+        function myFunction(e){
+            var x = e.clientX;
+            var y=e.clientY;
+
+            document.getElementById("p").innerHTML = (x+" "+y).fontcolor("teal");
+        }
+
+        function clearOut(){
+            document.getElementById("p").innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>

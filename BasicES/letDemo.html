@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Doc...</title>
+        </title>
+    </head>
+    <body>
+        <script>
+            var funcs = [];
+            for (let i = 0; i < 3; i++) {
+                funcs[i] = function(){
+                    console.log(i);
+                };    
+            }
+            for (var j = 0; j < 3; j++) {
+                funcs[j]();
+            }
+
+        </script>
+    </body>
+</html>

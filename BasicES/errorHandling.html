@@ -1,0 +1,23 @@
+<html lang="en">
+    <head>
+        <title>Error Handling</title>
+    </head>
+    <body>
+        <script>
+            function sum(x,y){
+                return(x+y)
+            }
+            try{
+                var result = sum(11,22)
+                document.write(result)
+            }
+            catch(err)
+            {
+                document.write(err)
+            }
+            finally{
+                document.write("<br>finaly always runs")
+            }
+        </script>
+    </body>
+</html>

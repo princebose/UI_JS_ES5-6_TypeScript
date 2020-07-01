@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <style>
+        body {
+            color: rgba(10, 124, 145, 0.473);
+            background-color: rgb(219, 175, 223);
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        <script>
+            class Animal {
+                constructor(name) {
+                    this.speed = 0;
+                    this.name = name;
+                }
+                run(speed) {
+                    this.speed = speed;
+                    document.write(`<br>${this.name} runs with speed ${this.speed}.<br>`);
+                }
+                stop() {
+                    this.speed = 0;
+                    document.write(`INHERITED FN. <br>${this.name} stands still.<br>`);
+                }
+            }
+            // let animal = new Animal("Horse");
+            // animal.run(100);
+            // animal.stop();
+
+            class Rabbit extends Animal {
+                hide() {
+                    document.write(`<br>${this.name} is Hiding in the Bush<br>`)
+                }
+                stop(){
+                    super.stop();
+                    document.write(`${this.name} is inside the override stop fn.`)
+                }
+            }
+
+            let rabbit = new Rabbit("Rabbit");
+            rabbit.run(50);
+            rabbit.hide();
+            rabbit.stop();
+            // function f(phrase){
+            //     return class{
+            //         sayHi(){alert(phrase)}
+            //     }
+            // }
+
+            // class User extends f("Hey Babe"){}
+            // new User().sayHi();
+        </script>
+    </h2>
+</body>
+
+</html>

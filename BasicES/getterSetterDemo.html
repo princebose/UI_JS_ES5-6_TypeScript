@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: "John",
+            surname: "Smith"
+        };
+
+        Object.defineProperty(user, 'fullname',
+            {
+                get() {
+                    return `${this.name} ${this.surname}`
+                },
+                set(value) {
+                    if (value==null){
+                        return;
+                    }
+                    [this.name, this.surname] = value.split(" ");
+                },
+                // writable:false,
+                // configurable:false
+            })
+
+
+            // get fullname() {
+            //     return `${this.name} ${this.surname}`
+            // },
+            // set fullname(value) {
+            //     [this.name,this.surname] = value.split(" ");
+            // },
+            // set Name(name){
+            //     this.name = name;
+            // }
+
+        //user.Name = "Hulk"; //getter setter no need to write ()
+        user.fullname = "Ash KC"
+        alert(user.fullname)
+    </script>
+</body>
+
+</html>

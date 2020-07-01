@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Demo: Edit Property Descriptor</h1>
+    <p id="p1">Result: </p>
+    
+    <script>    
+    // 'use strict'
+
+    function Student(){
+      this.name = "Steve";
+      this.gender = "Male";
+    }
+
+    var student1 = new Student();
+
+    Object.defineProperty(student1,'name', { writable:false} );
+    Object.defineProperty(student1,'age', { value:23, writable:false} );
+
+    
+    try
+    {
+        for (var prop in student1){
+        document.getElementById('p1').innerHTML += prop+ " "
+    }
+        student1.name = "James";
+        // student1.age = 23
+        document.getElementById("p1").innerHTML += student1.name;
+        document.getElementById("p1").innerHTML += student1.age;
+        
+    }
+    catch(ex)
+    {
+        document.getElementById("p1").innerHTML += ex.message;
+    }
+    </script>       
+    
+    <!-- <h1>Demo: Edit Property Descriptor</h1>
+    <p id="p1">Result: </p>
+     -->
+    <!-- <script>    
+    'use strict'
+
+    function Student(){
+      this.name = "Steve";
+      this.gender = "Male";
+    }
+
+    var student1 = new Student();
+
+    Object.defineProperty(student1,'name', { writable:false} );
+
+    try
+    {
+        student1.name = "James";
+        document.getElementById("p1").innerHTML += student1.name;
+    }
+    catch(ex)
+    {
+        document.getElementById("p1").innerHTML += ex.message;
+    }
+    </script>    -->
+</body>
+</html>
